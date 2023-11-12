@@ -6,9 +6,18 @@ The ESP32FlashPartitionsExplorer library provide a function to retrieve details 
 
 1. Download the ZIP file of this repository.
 2. Extract the ZIP file.
-3. Rename the extracted folder to `ESP32FlashPartitionsExplorer`.
+3. Navigate to the folder that contains the .cpp and .h files of the library. Rename this folder to `ESP32FlashPartitionsExplorer`.
 4. Move the `ESP32FlashPartitionsExplorer` folder to the `libraries` folder in your Arduino sketchbook.
-
+   
+**Note:** Make sure the folder structure looks like this:
+```
+Arduino
+   |-- libraries
+       |-- ESP32FlashPartitionsExplorer
+           |-- ESP32FlashPartitionsExplorer.cpp
+           |-- ESP32FlashPartitionsExplorer.h
+   |-- ... (other library files)
+```
 ## Usage
 
 1. Include the library in your Arduino sketch:
@@ -17,13 +26,15 @@ The ESP32FlashPartitionsExplorer library provide a function to retrieve details 
     #include <ESP32FlashPartitionsExplorer.h>
     ```
 
-   2. Use the provided functions to get information about ESP32 flash partitions:
+2. Use the provided function to get information about ESP32 flash partitions:
 
    ```cpp
-      void setup() {
-         Serial.begin(115200);
-         Serial.println(getPartitionsDetails());
-      }
+   ...
+   void setup() {
+     Serial.begin(115200);
+     Serial.println(getPartitionsDetails());
+   }
+   ...
    ```
 
 ## Functions
